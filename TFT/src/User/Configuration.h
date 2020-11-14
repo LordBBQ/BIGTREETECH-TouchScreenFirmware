@@ -25,7 +25,7 @@
  *
  * Default value is: 1 for LED_OFF
 */
-#define STARTUP_KNOB_LED_COLOR 0         // LED_OFF
+#define STARTUP_KNOB_LED_COLOR 6         // LED_OFF
 #define KEEP_KNOB_LED_COLOR_MARLIN_MODE  // Keeps the LED state in Marlin Mode
 
 /**
@@ -63,7 +63,7 @@
  *         12: DARKBLUE,  13: DARKGREEN,  14: GRAY,   15: DARKGRAY
  */
 #define MARLIN_BKCOLOR 1
-#define MARLIN_FNCOLOR 0
+#define MARLIN_FNCOLOR 4
 
 /**
  * Text displayed at the top of the TFT in Marlin Mode.
@@ -73,14 +73,14 @@
 /**
  * show banner text at the top of the TFT in Marlin Mode.
  */
-#define MARLIN_SHOW_BANNER  true //to enabled: true | to disabled: false
+#define MARLIN_SHOW_BANNER  false //to enabled: true | to disabled: false
 /**
  * Run Marlin Mode in Fullscreen
  *
  * Options:  0: Disabled. RECOMMENDED FOR TFT24
  *           1: Enabled Marlin Fullscreen mode.
  */
-#define DEFAULT_ST7920_FULLSCREEN_MODE 0 // 0: Disabled. RECOMMENDED FOR TFT24
+#define DEFAULT_ST7920_FULLSCREEN_MODE 1 // 0: Disabled. RECOMMENDED FOR TFT24
 
 /**
  * Keep Serial always On (ONLY SUPPORTED ON TFT24 V1.1, TFT35 V3.0, AND TFT28 V3.0)
@@ -91,7 +91,7 @@
  *
  * Options:  0: Disabled    1: Enabled
  */
-#define SERIAL_ALWAYS_ON 0  // Default: 0 (Disabled)
+#define SERIAL_ALWAYS_ON 1  // Default: 0 (Disabled)
 
 //===========================================================================
 //========================== Touch Mode Settings ============================
@@ -167,16 +167,16 @@
 #define LISTVIEW_BORDER_COLOR      15 // Border color in List view
 #define LISTVIEW_ICON_COLOR        15 // icon color in List view
 
-#define HOTEND_NUM   1    // set in 1~6
-#define EXTRUDER_NUM 1    // set in 1~6
+#define HOTEND_NUM   2    // set in 1~6
+#define EXTRUDER_NUM 2    // set in 1~6
 #define FAN_NUM      1    // set in 1~6
 #define FAN_CTRL_NUM 0    // set in 1~2
 
 #define PREHEAT_LABELS   {"PLA", "PETG", "ABS", "WOOD", "TPU", "NYLON"}
-#define PREHEAT_HOTEND   {200,   240,    230,   170,    220,   250}
-#define PREHEAT_BED      {60,    70,     90,    50,     50,    90}
+#define PREHEAT_HOTEND   {205,   235,    245,   170,    220,   250}
+#define PREHEAT_BED      {60,    70,     95,    50,     50,    90}
 
-#define HEAT_MAX_TEMP    {275,       275,       275,       275,       275,       275,       150,    60}   //max temperature can be set
+#define HEAT_MAX_TEMP    {285,       285,       275,       275,       275,       275,       105,    60}   //max temperature can be set
 #define HEAT_SIGN_ID     {"T0:",     "T1:",     "T2:",     "T3:",     "T4:",     "T5:",     "B:",   "C:"}
 #define HEAT_DISPLAY_ID  {"T0",      "T1",      "T2",      "T3",      "T4",      "T5",      "Bed",  "Chamber"}
 #define HEAT_CMD         {"M104 T0", "M104 T1", "M104 T2", "M104 T3", "M104 T4", "M104 T5", "M140", "M141"};
@@ -322,7 +322,7 @@
 /**
  * PID autotune
  */
-#define PID_CMD             {"M303 U1 C8 E0", "M303 U1 C8 E1", "M303 U1 C8 E2", "M303 U1 C8 E3", "M303 U1 C8 E4", "M303 U1 C8 E5", "M303 U1 C8 E-1", ""};
+#define PID_CMD             {"M303 U1 C10 E0", "M303 U1 C10 E1", "M303 U1 C8 E2", "M303 U1 C8 E3", "M303 U1 C8 E4", "M303 U1 C8 E5", "M303 U1 C10 E-1", ""};
 #define PID_PROCESS_TIMEOUT 900000                         // expressed in ms. E.g. 900000 corresponds to 15 minutes
 
 // LCD Encoder
